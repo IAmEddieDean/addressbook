@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('address')
-.controller('ContactsNewCtrl', function($scope, Contact){
+.controller('ContactsNewCtrl', function($scope, ContactList, $state){
   $scope.newContact = function(contact){
+    ContactList.init();
     previewFile ();
     
     function previewFile () {
@@ -13,7 +14,7 @@ angular.module('address')
       reader.onloadend = function () {
         preview.src = reader.result;
         contact.photo = reader.result;
-        Contact.addContact(contact);
+        ContactList.addContact(contact);
       };
       if (file) {
         reader.readAsDataURL(file);
@@ -21,5 +22,6 @@ angular.module('address')
         preview.src = '';
       }
     }
+    $state.go('contacts.list');
   };
 });

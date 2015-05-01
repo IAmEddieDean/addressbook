@@ -5,7 +5,7 @@ button.btn.btn-info(ng-click='addNewContact()') Add New Contact
     h3.text-center Your Contacts
     table.table.table-striped
       tbody
-        tr(ng-repeat='name in names track by $index')
-          td: h5: a(ui-sref='contacts.show({name:name})') {{name}}
+        tr(ng-repeat='contact in contacts')
+          td: h5(ng-click='showContact(contact)') {{contact.name}}
           //- td: img(ng-src='{{primary[name]}}')
-          td: button.btn.btn-xs.btn-danger.pull-right(ng-click='rmv(name,$index)') Delete
+          td: button.btn.btn-xs.btn-danger.pull-right(ng-click='deleteContact(contact)') Delete
