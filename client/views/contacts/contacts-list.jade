@@ -7,5 +7,4 @@ button.btn.btn-info(ng-click='addNewContact()') Add New Contact
       tbody
         tr(ng-repeat='contact in contacts')
           td: h5(ng-click='showContact(contact)') {{contact.name}}
-          //- td: img(ng-src='{{primary[name]}}')
           td: button.btn.btn-xs.btn-danger.pull-right(ng-click='deleteContact(contact)') Delete

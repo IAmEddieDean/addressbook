@@ -13,11 +13,5 @@ angular.module('address')
   $scope.deleteContact = function(contact){
     ContactList.deleteContact(contact);
   };
-  // $scope.afUser.$loaded(function(){
-  //
-  //   // $scope.names = $scope.afUser.names ? $scope.afUser.names.split(',') : [];
-  // });
-  // $scope.rmv = function(name, index){
-  //   Contact.rmv(name, index);
-  // };
+
 });

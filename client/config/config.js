@@ -13,7 +13,7 @@ angular.module('address')
   .state('contacts', {url: '/contacts', templateUrl: '/views/contacts/contacts.html', abstract: true})
   .state('contacts.new', {url: '/new', templateUrl: '/views/contacts/contacts-new.html', controller: 'ContactsNewCtrl'})
   .state('contacts.list', {url: '', templateUrl: '/views/contacts/contacts-list.html', controller: 'ContactsListCtrl'})
-  .state('contacts.show', {url: '/{contact}', templateUrl: '/views/contacts/contacts-show.html', controller: 'ContactsShowCtrl'});
-  //.state('contacts.edit', {url: '/edit/{contact}', templateUrl: '/views/contacts/contacts-edit.html', controller: 'ContactsEditCtrl'});
+  .state('contacts.show', {url: '/{contact}', templateUrl: '/views/contacts/contacts-show.html', controller: 'ContactsShowCtrl'})
+  .state('contacts.edit', {url: '/edit/{contact}', templateUrl: '/views/contacts/contacts-edit.html', controller: 'ContactsEditCtrl'});
 
 });
