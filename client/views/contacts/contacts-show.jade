@@ -1,0 +1,14 @@
+.row
+  .col-xs-4.col-xs-offset-1
+    h3 Contact Info
+    h4 Name: {{contact.name}}
+    h4 Address: {{contact.address}}
+    h4 Birthday: {{contact.birthday | date:yyyy-MM-dd}}
+    h4 Phone Number: {{contact.phoneNumber}}
+    h4 E-Mail: {{contact.email}}
+    h4 Home Page: {{contact.homepage}}
+    h4 Twitter: {{contact.twitter}}
+    h4 FaceBook: {{contact.facebook}}
+  .col-xs-4
+    img#showPhoto(ng-src='{{photo}}')
+    btn.btn.btn-sm.btn-warning(ng-click='editContact(contact)') Edit Contact

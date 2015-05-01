@@ -1,0 +1,36 @@
+h1 Edit Contact
+.row
+  .col-xs-4.col-xs-offset-1
+    form
+      .form-group
+        label(for='name') Name
+        input.form-control#name(type='text', name='name', ng-model='contact.name')
+      .form-group
+        label(for='address') Address
+        textarea.form-control#address(type='text', name='about', ng-model='contact.address')
+      .form-group
+        label(for='birthday') Birthday
+        input.form-control#birthday(type='date', name='birthday', ng-model='contact.birthday')
+      .form-group
+        label(for='phoneNumber') Phone Number
+        input.form-control#phoneNumber(type='tel', name='phoneNumber', ng-model='contact.phoneNumber')
+      .form-group
+        label(for='email') Email
+        input.form-control#email(type='email', name='email', ng-model='contact.email')
+  .col-xs-4.col-xs-offset-1
+    form
+      .form-group
+        label(for='homepage') Home Page
+        input.form-control#homepage(type='url', name='homepage', ng-model='contact.homepage')
+      .form-group
+        label(for='twitter') Twitter
+        input.form-control#twitter(type='url', name='twitter', ng-model='contact.twitter')
+      .form-group
+        label(for='homepage') FaceBook
+        input.form-control#facebook(type='url', name='facebook', ng-model='contact.facebook')
+      .form-group
+        label(for='photo') Photo
+        input.form-control#photo(type='file', name='photo', ng-model='contact.photo')
+        img#previewPic
+      .form-group
+        button.btn.form-control.btn-success(type='submit', ng-click='editContact(contact)') Save Contact
