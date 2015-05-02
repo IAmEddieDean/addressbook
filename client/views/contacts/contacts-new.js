@@ -6,9 +6,9 @@ angular.module('address')
     ContactList.init();
     previewFile ();
     
-    function previewFile () {
-      var preview = document.querySelector('img');
-      var file    = document.querySelector('input[type=file]').files[0];
+    function previewFile () {//<--this function converts an image file into a base64 string.
+      var preview = document.querySelector('img');//this string can be converted back to an
+      var file    = document.querySelector('input[type=file]').files[0];//image using ng-src
       var reader  = new FileReader();
       
       reader.onloadend = function () {

@@ -19,3 +19,8 @@ angular.module('address')
 
   return Contact;
 });
+
+/*this factory does the heavy lifting of individual contacts
+within firebase. As in, this factory talks to firebase and any controllers
+that use it as a dependency. It does not, however, talk to the DOM/view,
+that task is left to the controllers alone*/

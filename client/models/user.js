@@ -23,3 +23,5 @@ angular.module('address')
 
   return User;
 });
+/*this factory talks to firebase about the state of user authorization.
+it takes and passes information to/from the nav controller*/
